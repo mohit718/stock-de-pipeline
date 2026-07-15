@@ -18,7 +18,7 @@ Orchestrated daily via Airflow, running alongside the Sales Data Pipeline in the
 
 ## Architecture
 
-![Architecture diagram](docs/architecture.png)
+![Architecture diagram](POC/architecture.png)
 
 | Stage | Tool | What happens |
 |---|---|---|
