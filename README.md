@@ -3,9 +3,9 @@
 An incremental data engineering pipeline: daily stock price data → cloud storage → data warehouse → merged fact table → orchestrated daily runs → live dashboard.
 
 Built as a second, deliberately different portfolio project — same Data Engineering fundamentals as the [Sales Data ETL Pipeline](../sales-de-pipeline), but a different cloud (AWS instead of GCP), a different warehouse (Snowflake instead of BigQuery), and — most importantly — a genuinely **incremental** load pattern instead of full-refresh.
+![Dashboard](POC/dashboard.png)
 
 ---
-
 ## What it does
 
 Pulls daily price data for 5 tickers (AAPL, MSFT, GOOGL, AMZN, TSLA) from the Alpha Vantage API, lands the raw JSON in S3, loads it into Snowflake, and **merges** it into a clean fact table — only inserting new trading days and updating rows where the source data actually changed, never blindly reprocessing everything.
