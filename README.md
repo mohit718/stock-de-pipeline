@@ -2,9 +2,10 @@
 
 An incremental data engineering pipeline: daily stock price data → cloud storage → data warehouse → merged fact table → orchestrated daily runs → live dashboard.
 
-Built as a second, deliberately different portfolio project — same Data Engineering fundamentals as the [Sales Data ETL Pipeline](../sales-de-pipeline), but a different cloud (AWS instead of GCP), a different warehouse (Snowflake instead of BigQuery), and — most importantly — a genuinely **incremental** load pattern instead of full-refresh.
+Built as a second, deliberately different portfolio project — same Data Engineering fundamentals as the [Sales Data ETL Pipeline](https://github.com/mohit718/sales-de-pipeline), but a different cloud (AWS instead of GCP), a different warehouse (Snowflake instead of BigQuery), and — most importantly — a genuinely **incremental** load pattern instead of full-refresh.
 ![Dashboard](POC/dashboard.png)
 
+Live dashboard — 5 tickers, updated daily via the Airflow DAG above
 ---
 ## What it does
 
